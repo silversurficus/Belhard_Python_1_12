@@ -32,3 +32,4 @@ with get_session() as db_session:
     print("ID:", x.id, "Name: ", x.name)
     x = db_session.query(Genres).get('WESTERN')
     x.name = 'Western'
+    db_session.commit()
