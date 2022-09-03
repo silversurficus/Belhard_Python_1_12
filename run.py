@@ -30,3 +30,5 @@ with get_session() as db_session:
     x.name = 'Eastern'
     db_session.commit()
     print("ID:", x.id, "Name: ", x.name)
+    x = db_session.query(Genres).get('WESTERN')
+    x.name = 'Western'
